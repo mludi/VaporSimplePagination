@@ -31,7 +31,7 @@ drop.get("paginated") { request in
     guard let page = request.data["page"]?.int else {
         return try JSON(Post.all().makeNode())
     }
-    guard let json = Post.paginate(limit: 15, page: page, description: "posts", makeJSON: true) else {
+    guard let pagininated = Post.paginate(limit: 15, page: page, description: "posts", makeJSON: true) else {
         throw Abort.badRequest
     }
     return try JSON(node: pagininated)
