@@ -2,7 +2,7 @@ import Vapor
 import Fluent
 
 public extension Model {
-    static func paginate(limit inLimit: Int = 10, page inPage: Int = 1, description inDescription: String = "data", makeJSON inMakeJSON: Bool = false) -> [JSON]? {
+    static func paginate(limit inLimit: Int = 10, page inPage: Int = 1, description inDescription: String = "data", makeJSON inMakeJSON: Bool = false) -> JSON? {
         guard let total = try? self.query().count() else { return nil }
         let offset = inLimit * (inPage - 1)
         guard let query = try? self.query().makeQuery() else { return nil }
@@ -16,6 +16,6 @@ public extension Model {
             "per_page": inLimit,
             "total": total
         ]) else { return nil }
-        return [theJsonObject]
+        return theJsonObject
     }
 }
