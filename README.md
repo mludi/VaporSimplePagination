@@ -46,40 +46,40 @@ You can pass _true_ as makeJSON - param if your Model has overriden the `func ma
 Sample response looks like the following
 
 ```json
-[
-	{
-		"current_page": 1,
-		"per_page": 15,
-		"posts": [
-			{
-				"content": "test",
-				"created_at": "2016-11-23 18:45:16",
-				"id": 1,
-				"image_path": "",
-				"updated_at": "2016-11-23 18:45:16",
-					"user": {
-						"created_at": "2016-11-23 18:45:16",
-						"id": 1,
-						"updated_at": "2016-11-23 18:45:16",
-						"username": "matz"
-					}
-			},
-			{
-				"content": "test2",
-				"created_at": "2016-11-23 18:45:16",
-				"id": 1,
-				"image_path": "",
-				"updated_at": "2016-11-23 18:45:16",
-					"user": {
-						"created_at": "2016-11-23 18:45:16",
-						"id": 1,
-						"updated_at": "2016-11-23 18:45:16",
-						"username": "matz"
-					}
-			}
-		],
-		"total": 28,
-		"total_pages": 2
-	}
-]
+
+{
+	"current_page": 1,
+	"per_page": 15,
+	"posts": [
+		{
+			"content": "test",
+			"created_at": "2016-11-23 18:45:16",
+			"id": 1,
+			"image_path": "",
+			"updated_at": "2016-11-23 18:45:16",
+				"user": {
+					"created_at": "2016-11-23 18:45:16",
+					"id": 1,
+					"updated_at": "2016-11-23 18:45:16",
+					"username": "matz"
+				}
+		},
+		{
+			"content": "test2",
+			"created_at": "2016-11-23 18:45:16",
+			"id": 1,
+			"image_path": "",
+			"updated_at": "2016-11-23 18:45:16",
+				"user": {
+					"created_at": "2016-11-23 18:45:16",
+					"id": 1,
+					"updated_at": "2016-11-23 18:45:16",
+					"username": "matz"
+				}
+		}
+	],
+	"total": 28,
+	"total_pages": 2
+}
+
 ```
